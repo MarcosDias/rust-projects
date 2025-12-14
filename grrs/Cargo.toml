@@ -1,6 +1,12 @@
 [package]
 name = "grrs"
 version = "0.1.0"
+authors = ["Marcos Dias"]
+license = "MIT"
+description = "A tool to search in files"
+readme = "README.md"
+keywords = ["search", "grep", "files", "cli"]
+categories = ["command-line-utilities"]
 edition = "2024"
 
 [dependencies]
