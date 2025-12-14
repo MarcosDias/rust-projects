@@ -12,11 +12,7 @@ fn main() -> anyhow::Result<()> {
     let content = std::fs::read_to_string(&args.path)
         .with_context(|| format!("failed to read file `{}`", args.path.display()))?;
 
-    for line in content.lines() {
-        if line.contains(&args.pattern) {
-            println!("{}", line);
-        }
-    }
+    grrs::find_matches(&content, &args.pattern, &mut std::io::stdout());
 
     Ok(())
 }
